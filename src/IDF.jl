@@ -1,11 +1,20 @@
 module IDF
 
-using DataFrames, CSV, Random, StatsBase
+using DataFrames, Random, StatsBase
 using Extremes, Distributions
 
-include("compute.jl")
-include("data.jl")
+import CSV
 
-export load_data, load_station, BIC_GEV
+include("data.jl")
+include("compute.jl")
+
+export 
+    
+    # loading functions
+    load_data, 
+    load_station, 
+    
+    # computation functions
+    BIC_GEV
 
 end # module
