@@ -1,0 +1,4 @@
+name = "IDF"
+uuid = "fee67fa5-87cf-4bee-a8ab-ff32e3d0b0f1"
+authors = ["LeoGuillon <leo.guillon@polytechnique.edu>"]
+version = "0.1.0"
