@@ -28,5 +28,5 @@ julia> IDF.load_station("701S001")
 ```
 """
 function load_station(ID::String)::DataFrame
-    load_data("/stations/data/"*ID)
+    load_data("/stations_data/"*ID)
 end

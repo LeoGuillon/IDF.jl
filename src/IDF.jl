@@ -15,6 +15,7 @@ export
     load_station, 
     
     # computation functions
+    logL
     BIC_GEV
 
 end # module
