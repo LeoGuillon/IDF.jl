@@ -28,5 +28,9 @@ julia> IDF.load_station("701S001")
 ```
 """
 function load_station(ID::String)::DataFrame
-    load_data("/stations_data/"*ID)
+    filename = joinpath(dirname(@__FILE__), "..", "data/stations_data", string(ID, ".csv"))
+    if isfile(filename)
+        return CSV.read(filename, DataFrame)
+    end
+    error("There is no station with ID $ID")
 end
