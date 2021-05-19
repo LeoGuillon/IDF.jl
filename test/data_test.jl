@@ -4,7 +4,7 @@
         @test_throws ErrorException IDF.load_data("nonexistant")
 
         #station list loading
-        df = IDF.load(station_list)
+        df = IDF.load_data(station_list)
     end
 
     @testset "load_station" begin
@@ -12,5 +12,6 @@
         @test_throws ErrorException IDF.load_station("nonexistant")
 
         #station loading
+        df = IDF.load_station("8100512")
     end
 end
