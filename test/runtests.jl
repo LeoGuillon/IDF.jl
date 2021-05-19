@@ -1,5 +1,5 @@
 using DataFrames
-using Extremes, GMRF, Distributions
+using Extremes, Distributions
 using IDF, Test
 
 @testset "IDF.jl" begin 
