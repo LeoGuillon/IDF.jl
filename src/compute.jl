@@ -14,7 +14,7 @@ end
 Compute the BIC of a given vector `Y` under the model of a GEV.
 """
 function BIC_GEV(Y::Vector{Float64})
-    p = gevfit(y).θ̂
+    p = gevfit(Y).θ̂
     n = length(Y)
     k = length(p)
 
