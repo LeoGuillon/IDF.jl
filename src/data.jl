@@ -47,9 +47,18 @@ end
     Pcp
 
 Returns the maximum precipitation of the station with the `ID` code, for the duration `DURATION`, in the form of a vector of float.
+
+The possible durations are : 5 min, 10 min, 15 min, 30 min, 1 h, 2 h, 6 h, 12 h, 24 h
+
+#Examples
+```julia-repl
+julia> IDF.pcp("701S001", "24 h")
+```
 """
-function Pcp(ID::String, Duration::String)::Vector{Float64}
+function pcp(ID::String, duration::String)::Vector{Float64}
     df = load_station(ID)
 
-    
+    filter!(row -> row[:Duration] == duration, df)
+
+    return df[:, :Pcp]
 end

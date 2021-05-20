@@ -12,10 +12,11 @@ export
     
     # loading functions
     load_data, 
-    load_station, 
+    load_station,
+    pcp, 
     
     # computation functions
-    logL
+    logL,
     BIC_GEV
 
 end # module
