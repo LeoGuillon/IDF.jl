@@ -1,3 +1,3 @@
 using Documenter, IDF
 
-makedocs(sitename="IDF Documentation")
+makedocs(sitename="IDF.jl")
