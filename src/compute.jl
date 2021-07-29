@@ -8,6 +8,10 @@ function logL(Y::Vector{Float64}, μ::Float64, σ::Float64, ξ::Float64)
     return loglikelihood(G, Y)
 end
 
+function logL(Y::Vector{Float64}, p::Vector{Float64})
+    return logL(Y, p[1], exp(p[2]), p[3])
+end
+
 """
     BIC_GEV
 
